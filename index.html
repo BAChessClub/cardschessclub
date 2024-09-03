@@ -28,27 +28,31 @@
     <script>
       var prevscrolly = window.pageYOffset;
         window.onscroll = function() {
-          const x = document.getElementById("nav")
+          const x = document.getElementById("nav");
           var currentscrollpos = window.pageYOffset;
           if (prevscrolly > currentscrollpos) {
-            x.style.top = "0px"
+            x.style.top = "0px";
           }
           else if (prevscrolly < currentscrollpos) {
-            x.style.top = "-10vh"
+            x.style.top = "-10vh";
           }
           prevscrolly = currentscrollpos;
         }
-      var detectMob = function() {
-        return ( window.innerWidth <= 800 ) && ( window.innerHeight <= 600 );
-      }
 
       firemobilecheck = function() {
-        console.log(detectMob)
-        if (!detectMob) { // not mobile
-          console.log("n")
+        const x = document.getElementById("darkmode");
+        console.log(( window.innerWidth <= 800 ) && ( window.innerHeight <= 600 ))
+        if (!( window.innerWidth <= 800 ) && ( window.innerHeight <= 600 )) { // not mobile
+          x.style.transform = "scale(1)";
         }
         else { // mobile
-          console.log("m")
+          if (window.innerHeight > window.innerWidth) { // mobile portrait
+            x.style.transform = "scale(2)";
+          }
+          else { // mobile landscape
+            x.style.transform = "scale(1)";
+          }
+          
         }
       }
       window.addEventListener("resize", firemobilecheck);
@@ -66,5 +70,6 @@
       }
     </script>
     <h1 style="margin-top: calc(10vh + 50px);">Cards Chess Club</h1>
+    <h2>Welcome to the webpage for the Cards Chess Club!</h2>
   </body>
 </html>

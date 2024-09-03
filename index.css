@@ -1,7 +1,7 @@
 :root {
     --color-1: #F2EFDC;
-    --color-2: #000;
-    --color-3: #1C1C1C;
+    --color-2: #101010;
+    --color-3: #202020;
     --color-4: #000;
     --color-5: #000;
     --color-6: #4a4e69;
@@ -15,7 +15,7 @@
     --color-3: #b8b6a7;
     --color-4: #000;
     --color-5: #000;
-    --color-6: #c9ada7;
+    --color-6: #b0918a;
     --margin-l: calc(100% - 5vh);
   }
 
@@ -84,9 +84,19 @@ h1 {
     font-size: 5vh;
     transition: all 0.2s;
 }
+h2 {
+  color: var(--color-1);
+    text-align: center;
+    margin: auto;
+    display: block;
+    font-family: Verdana;
+    height: 20vh;
+    font-size: 4vh;
+    transition: all 0.2s;
+}
 
 nav a sliderback slider {
-  background: var(--color-1);
+  background: var(--color-3);
     transition: all 0.2s ease-in-out, var(--page-color-transition);
     margin-left: var(--margin-l);
 }
@@ -127,7 +137,7 @@ nav a sliderback {
   left: 8px;
   bottom: 4px;
   border-radius: 10px;
-  background: var(--color-1);
+  background: var(--color-3);
   transform-origin: center center;
   transition: transform 0.5s ease, left 0.25s ease, bottom 0.25s ease, var(--page-color-transition);
 }
