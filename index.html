@@ -1,4 +1,70 @@
 <!DOCTYPE html>
 <html>
-  
+  <head>
+    <link rel="stylesheet" href="/index.css">
+  </head>
+
+  <body>
+    <nav id="nav">
+      <a class="themebutton" id="themebutton">
+        <sliderback>
+          <slider id="slider">
+            <span id="darkmode" role="button" tabIndex="0" onClick="changeMode()">
+              <div class="darkmode_icon">
+                <span class="ray"></span>
+                <span class="ray"></span>
+                <span class="ray"></span>
+                <span class="ray"></span>
+                <span class="ray"></span>
+                <span class="ray"></span>
+                <span class="ray"></span>
+                <span class="ray"></span>
+              </div>
+            </span>
+          </slider>
+        </sliderback>
+      </a>
+    </nav>
+    <script>
+      var prevscrolly = window.pageYOffset;
+        window.onscroll = function() {
+          const x = document.getElementById("nav")
+          var currentscrollpos = window.pageYOffset;
+          if (prevscrolly > currentscrollpos) {
+            x.style.top = "0px"
+          }
+          else if (prevscrolly < currentscrollpos) {
+            x.style.top = "-10vh"
+          }
+          prevscrolly = currentscrollpos;
+        }
+      var detectMob = function() {
+        return ( window.innerWidth <= 800 ) && ( window.innerHeight <= 600 );
+      }
+
+      firemobilecheck = function() {
+        console.log(detectMob)
+        if (!detectMob) { // not mobile
+          console.log("n")
+        }
+        else { // mobile
+          console.log("m")
+        }
+      }
+      window.addEventListener("resize", firemobilecheck);
+
+      let body = document.querySelector("body");
+
+      body.dataset.theme = "light";
+
+      function changeMode() {
+        if (body.dataset.theme === "light") {
+          body.dataset.theme = "dark";
+        } else {
+          body.dataset.theme = "light";
+        }
+      }
+    </script>
+    <h1 style="margin-top: calc(10vh + 50px);">Cards Chess Club</h1>
+  </body>
 </html>

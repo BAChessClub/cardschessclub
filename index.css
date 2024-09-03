@@ -1,0 +1,205 @@
+:root {
+    --color-1: #F2EFDC;
+    --color-2: #000;
+    --color-3: #1C1C1C;
+    --color-4: #000;
+    --color-5: #000;
+    --color-6: #4a4e69;
+    --page-color-transition: background .2s ease, color .2s ease;
+    --margin-l: 0;
+  }
+  
+  [data-theme="dark"] {
+    --color-1: #0e0e0d;
+    --color-2: #c7a565;
+    --color-3: #b3955b;
+    --color-4: #000;
+    --color-5: #000;
+    --color-6: #c9ada7;
+    --margin-l: calc(100% - 5vh);
+  }
+
+body {
+    background-color: var(--color-2);
+    margin: 0;
+    height: 110vh;
+    transition: all 0.2s;
+}
+
+nav {
+    position: fixed;
+    width: 100vw;
+    height: 10vh;
+    background-color: var(--color-3);
+    margin: 0;
+    top: 0;
+    transition: all 0.2s;
+}
+a {
+    display: block;
+    height: 10vh;
+    transition: all 0.2s;
+}
+nav .themebutton {
+    background-color: var(--color-2);
+    border-radius: 100px;
+    width: calc(10vh + 2px * 2);
+    height: calc(5vh + 2px * 2);
+    margin-top: calc(5vh / 2 - 2px);
+    float: right;
+    margin-right: calc(5vh / 2 - 2px);
+}
+nav a sliderback{
+    border-radius: 100px;
+    width: 10vh;
+    height: 5vh;
+    margin: auto;
+    margin-top: 2px;
+    display: block;
+}
+nav a sliderback slider {
+    background-color: black;
+    height: 100%;
+    aspect-ratio: 1/1;
+    /*background-image: url(/images/crescent.png);*/
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+    border-radius: 100px;
+    transition: all 0.2s;
+    margin-left: 0;
+}
+nav a .lightslider {
+    margin-left: calc(100% - 5vh);
+    /*background-image: url(/images/sun.png);*/
+}
+
+h1 {
+    color: var(--color-1);
+    text-align: center;
+    margin: auto;
+    display: block;
+    font-family: Verdana;
+    height: 20vh;
+    font-size: 5vh;
+    transition: all 0.2s;
+}
+
+nav a sliderback slider {
+  background: var(--color-1);
+    transition: all 0.2s ease-in-out, var(--page-color-transition);
+    margin-left: var(--margin-l);
+}
+nav a sliderback {
+    background-color: var(--color-2);
+    transition: transform 0.2s ease-in-out, var(--page-color-transition);
+}
+
+#darkmode {
+  cursor: pointer;
+  width: 5vh;
+  height: 5vh;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.darkmode_icon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background: var(--color-6);
+  transform-origin: center center;
+  transition: transform 0.75s ease-in-out, var(--page-color-transition);
+}
+
+.darkmode_icon::after {
+  position: absolute;
+  content: '';
+  width: 16px;
+  height: 16px;
+  left: 8px;
+  bottom: 4px;
+  border-radius: 10px;
+  background: var(--color-1);
+  transform-origin: center center;
+  transition: transform 0.5s ease, left 0.25s ease, bottom 0.25s ease, var(--page-color-transition);
+}
+
+.darkmode_icon .ray {
+  position: absolute;
+  left: 7px;
+  top: 7px;
+  width: 6px;
+  height: 6px;
+  border-radius: 6px;
+  background: var(--color-6);
+  transform-origin: center;
+  transition: transform 0.5s ease-in-out, var(--page-color-transition);
+}
+
+.ray:nth-child(1) {
+  transform: rotate(45deg) translateX(0);
+}
+.ray:nth-child(2) {
+  transform: rotate(90deg) translateX(0);
+}
+.ray:nth-child(3) {
+  transform: rotate(135deg) translateX(0);
+}
+.ray:nth-child(4) {
+  transform: rotate(180deg) translateX(0);
+}
+.ray:nth-child(5) {
+  transform: rotate(225deg) translateX(0);
+}
+.ray:nth-child(6) {
+  transform: rotate(270deg) translateX(0);
+}
+.ray:nth-child(7) {
+  transform: rotate(315deg) translateX(0);
+}
+.ray:nth-child(8) {
+  transform: rotate(360deg) translateX(0);
+}
+
+[data-theme="dark"] {
+  & .darkmode_icon {
+    transform: scale(0.6);
+  }
+  & .darkmode_icon::after {
+    left: 15px;
+    bottom: 8px;
+    transform: scale(0);
+  }
+  & .ray:nth-child(1) {
+    transform: rotate(45deg) translateX(-16px);
+  }
+  & .ray:nth-child(2) {
+    transform: rotate(90deg) translateX(-16px);
+  }
+  & .ray:nth-child(3) {
+    transform: rotate(135deg) translateX(-16px);
+  }
+  & .ray:nth-child(4) {
+    transform: rotate(180deg) translateX(-16px);
+  }
+  & .ray:nth-child(5) {
+    transform: rotate(225deg) translateX(-16px);
+  }
+  & .ray:nth-child(6) {
+    transform: rotate(270deg) translateX(-16px);
+  }
+  & .ray:nth-child(7) {
+    transform: rotate(315deg) translateX(-16px);
+  }
+  & .ray:nth-child(8) {
+    transform: rotate(360deg) translateX(-16px);
+  }
+}
