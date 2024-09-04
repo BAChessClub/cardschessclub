@@ -103,10 +103,10 @@ nav a sliderback slider {
 nav a sliderback {
     background-color: var(--color-2);
     transition: transform 0.2s ease-in-out, var(--page-color-transition);
+    cursor: pointer;
 }
 
 #darkmode {
-  cursor: pointer;
   width: 5vh;
   height: 5vh;
   margin: auto;
