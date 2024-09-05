@@ -105,10 +105,11 @@ p {
   margin: auto;
   display: block;
   font-family: Verdana;
-  font-size: 3vh;
+  font-size: 1.5vw;
   transition: all 0.2s;
   padding-left: 5vw;
   padding-right: 5vw;
+  text-wrap:balance;
 }
 
 nav a sliderback slider {
