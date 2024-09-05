@@ -74,6 +74,21 @@ nav a .lightslider {
     /*background-image: url(/images/sun.png);*/
 }
 
+nav .menubutton {
+  height: 100%;
+  aspect-ratio: 1/1;
+  float: left;
+  margin-right: 5vw;
+  cursor: pointer;
+}
+.curvedline {
+height: 4%;
+width: 60%;
+border-radius: 50%/100px 100px 0 0;
+background-color: var(--color-6);
+position: relative;
+}
+
 h1 {
     color: var(--color-1);
     text-align: center;
@@ -229,4 +244,79 @@ nav a sliderback {
   & .ray:nth-child(8) {
     transform: rotate(360deg) translateX(-16px);
   }
+}
+
+@keyframes menutox_top {
+  0% {rotate: 0deg; top: calc(30% - 4%);}
+  33% {rotate: 0deg;}
+  66% {top: calc(50% - 2.5%); right:0}
+  100% {rotate: -45deg;top: calc(50% - 2.5%); right:2.5%}
+}
+
+@keyframes menutox_mid {
+  0% {rotate: 0deg; top:calc(50% - 4%); width: 60%;}
+  33% {rotate: 0deg; top:calc(50% - 4%); width: 1%;}
+  66% {rotate: 45deg; top:calc(50% - 4%); width: 60%;}
+  100% {rotate: 45deg;}
+}
+
+@keyframes menutox_bot {
+  0% {rotate: 0deg; top: calc(70% - 4%);}
+  33% {rotate: 0deg;}
+  66% {top: calc(50% - 2.5%);left: 0;}
+  100% {rotate: -45deg;top: calc(50% - 2.5%);left: 2.5%;}
+}
+@keyframes xtomenu_top {
+  100% {rotate: 0deg; top: calc(30% - 4%);}
+  66% {rotate: 0deg;}
+  33% {top: calc(50% - 2.5%); right:0}
+  0% {rotate: -45deg;top: calc(50% - 2.5%); right:2.5%}
+}
+
+@keyframes xtomenu_mid {
+  100% {rotate: 0deg; top:calc(50% - 4%); width: 60%;}
+  66% {rotate: 0deg; top:calc(50% - 4%); width: 1%;}
+  33% {rotate: 45deg; top:calc(50% - 4%); width: 60%;}
+  0% {rotate: 45deg;}
+}
+
+@keyframes xtomenu_bot {
+  100% {rotate: 0deg; top: calc(70% - 4%);}
+  66% {rotate: 0deg;}
+  33% {top: calc(50% - 2.5%);left: 0;}
+  0% {rotate: -45deg;top: calc(50% - 2.5%);left: 2.5%;}
+}
+
+.middleline {
+  margin: auto;
+}
+.topline {
+  top: calc(30% - 4%);
+  rotate: 0deg;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(1,0,0,1);
+  animation-play-state: paused;
+  animation-direction: normal;
+  animation-duration: 1.5s;
+  animation-name: menutox_top;
+}
+.midline {
+  top: calc(50% - 4%);
+  rotate: 0deg;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(1,0,0,1);
+  animation-play-state: paused;
+  animation-direction: normal;
+  animation-duration: 1.5s;
+  animation-name: menutox_mid;
+}
+.botline {
+  top: calc(70% - 4%);
+  rotate: 0deg;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(1,0,0,1);
+  animation-play-state: paused;
+  animation-direction: normal;
+  animation-duration: 1.5s;
+  animation-name: menutox_bot;
 }

@@ -6,6 +6,11 @@
 
   <body>
     <nav id="nav">
+      <a class="menubutton" id="menubutton" onclick="changeMenu()">
+        <div class="curvedline middleline topline" id="topline"></div>
+        <div class="curvedline middleline midline" id="midline"></div>
+        <div class="curvedline middleline botline" id="botline"></div>
+      </a>
       <a class="themebutton" id="themebutton">
         <sliderback onClick="changeMode()">
           <slider id="slider">
@@ -56,7 +61,7 @@
         }
       }
       window.addEventListener("resize", firemobilecheck);
-
+      firemobilecheck();
       let body = document.querySelector("body");
 
       body.dataset.theme = "light";
@@ -67,6 +72,26 @@
         } else {
           body.dataset.theme = "light";
         }
+      }
+      var menuopen = false;
+      function changeMenu() {
+        const topline = document.getElementById("topline");
+        const midline = document.getElementById("midline");
+        const botline = document.getElementById("botline");
+        if (menuopen) { // menu already open
+          topline.style.animationName = "xtomenu_top";
+          midline.style.animationName = "xtomenu_mid";
+          botline.style.animationName = "xtomenu_bot";
+        }
+        else { // menu not open
+          topline.style.animationName = "menutox_top";
+          midline.style.animationName = "menutox_mid";
+          botline.style.animationName = "menutox_bot";
+        }
+        topline.style.animationPlayState = "running";
+        midline.style.animationPlayState = "running";
+        botline.style.animationPlayState = "running";
+        menuopen = !menuopen;
       }
     </script>
     <h1 style="margin-top: calc(10vh + 50px);">Cards Chess Club</h1>
