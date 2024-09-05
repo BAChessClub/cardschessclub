@@ -57,6 +57,7 @@ nav a sliderback{
     margin-top: 2px;
     display: block;
 }
+
 nav a sliderback slider {
     background-color: black;
     height: 100%;
@@ -69,18 +70,41 @@ nav a sliderback slider {
     transition: all 0.2s;
     margin-left: 0;
 }
+
 nav a .lightslider {
     margin-left: calc(100% - 5vh);
     /*background-image: url(/images/sun.png);*/
 }
 
 nav .menubutton {
-  height: 100%;
+  height: 10vh;
   aspect-ratio: 1/1;
   float: left;
   margin-right: 5vw;
   cursor: pointer;
+  transition: margin-left 1.5s;
+  position: fixed;
 }
+
+nav .menu {
+  width: 40vw;
+  left: calc(-40vw - 2px);
+  height: 100vh;
+  background-color: var(--color-3);
+  position: fixed;
+  transition: all 0.2s;
+  transition: left 1.5s;
+  border-right: 2px solid var(--color-2);
+}
+
+.filter {
+  position: fixed;
+  width: 200vw;
+  height: 200vh;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0);
+}
+
 .curvedline {
 height: 4%;
 width: 60%;
