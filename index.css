@@ -94,10 +94,74 @@ nav .menu {
   transition: left 1.5s;
   border-right: 2px solid var(--color-2);
 }
+
 nav .buttonmenu {
   width: 90%;
   margin: auto;
-  margin-top: ;
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+  background-color: var(--color-2);
+  border-radius: 25px;
+  height: 7vh;
+  text-decoration: none;
+}
+
+.buttonmenu .buttontext {
+  width: calc(90% - 7vh);
+  text-align: center;
+  line-height: 7vh;
+  color: var(--color-1);
+  font-family: Verdana;
+  text-decoration: none;
+  top:3.5vh;
+  right: 5%;
+  display: block;
+  position: absolute;
+}
+
+.buttonmenu .logodiv {
+  aspect-ratio: 1/1;
+  height: 7vh;
+}
+
+.triangle {
+  height: 0;
+  border: 3vh solid rgba(0, 0, 0, 0);
+  border-top-width: 0;
+  top: .5vh;
+  left: .5vh;
+  border-bottom-color: var(--color-6);
+  position: relative;
+  aspect-ratio: 1/1;
+}
+.housebase {
+  height: 3vh;
+  margin: auto;
+  aspect-ratio: 1/1;
+  border-radius: 2px;
+  top: calc(0.5vh + 3vh / 2);
+  background-color: var(--color-6);
+}
+
+@keyframes housedooropen {
+  0% {width: 0; right: .75vh}
+  100% {width: .75vh; right: 0;}
+}
+@keyframes housedoorclose {
+  100% {width: 0; right: .75vh}
+  0% {width: .75vh; right: 0;}
+}
+
+.housedoor {
+  margin: auto;
+  height: 1.5vh;
+  width: 0;
+  right: calc(1vh / 2);
+  border-radius: 1px;
+  top: -1.5vh;
+  background-color: var(--color-2);
+  position: relative;
+  transition: right ease-in-out .75s, width ease-in-out .75s;
 }
 
 .filter {

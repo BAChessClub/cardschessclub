@@ -8,7 +8,14 @@
     <div class="filter"></div>
     <nav id="nav">
       <div class="menu" id="menu">
-
+        <a class="buttonmenu" href="/" onmouseenter="mouseinhome()" onmouseout="mouseouthome()">
+          <div class="logodiv" id="homebutton">
+            <div class="triangle"></div>
+            <div class="housebase"></div>
+            <div class="housedoor" id="housedoor"></div>
+          </div>
+          <span class="buttontext">Home</span>
+        </a>
       </div>
       <a class="menubutton" id="menubutton" onclick="changeMenu()">
         <div class="curvedline middleline topline" id="topline"></div>
@@ -104,6 +111,18 @@
         botline.style.animationPlayState = "running";
         menuopen = !menuopen;
       }
+      const homebutton = document.getElementById("homebutton");
+      const doorlog = document.getElementById("housedoor");
+      function mouseinhome() { // open door
+        doorlog.style.right = "0vh";
+        doorlog.style.width = "1vh";
+      }
+
+      function mouseouthome() { // close door
+        doorlog.style.right = "0.5vh";
+        doorlog.style.width = "0vh";
+      }
+      
     </script>
     <h1 style="margin-top: calc(10vh + 50px);">Cards Chess Club</h1>
     <h2>Welcome to the webpage for the Cards Chess Club!</h2>
