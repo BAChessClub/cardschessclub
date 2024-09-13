@@ -106,23 +106,31 @@ nav .buttonmenu {
   text-decoration: none;
 }
 
+
 .buttonmenu .buttontext {
-  width: calc(90% - 7vh);
   text-align: center;
   line-height: 7vh;
   color: var(--color-1);
   font-family: Verdana;
   text-decoration: none;
-  top:3.5vh;
-  right: 5%;
   display: block;
-  position: absolute;
+  position: relative;
+  bottom: 7vh;
 }
-
+.menu h1 {
+  margin-bottom: 1vh;
+  margin-top: 1vh;
+}
 .buttonmenu .logodiv {
   aspect-ratio: 1/1;
   height: 7vh;
 }
+
+hr {
+  border-color: var(--color-2);
+  border-style: solid;
+  color: var(--color-2);
+} 
 
 .triangle {
   height: 0;
@@ -192,6 +200,7 @@ h1 {
     padding-right: 5vw;
     margin-bottom: 15vh;
 }
+
 h2 {
   color: var(--color-1);
     text-align: center;
